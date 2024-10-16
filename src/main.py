@@ -15,4 +15,5 @@ if __name__ == '__main__':
         print(f"Conversation Cost: {format(total_cost, '.10f')}$")
         print('\n')
         # Create log file to keep conversation
-        print(f'Conversation log: {model.memory}')
+        print(f'Conversation log: ')
+        print(model.memory)
