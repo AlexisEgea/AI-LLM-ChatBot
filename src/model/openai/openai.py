@@ -21,7 +21,7 @@ class OpenaiModel(ModelAI):
         self.model = ChatOpenAI(model=self.model_name)
 
     def get_response(self, message):
-        with open('src/metadata/instruction.md', 'r') as instruction_file:
+        with open('src/metadata/chat_bot/instruction.md', 'r') as instruction_file:
             instruction = instruction_file.read()
 
         message_package = [
