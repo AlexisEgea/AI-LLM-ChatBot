@@ -46,7 +46,8 @@ class OpenaiModel(ModelAI):
         if len(self.memory) > self.limit_memory_size:
             self.limit_memory_size += len(self.memory) / 2
             pass
-        self.memory += f"User: {message}\n AI:{response}\n"
+        self.memory += (f"User: {message}\n"
+                        f"AI:{response}\n")
 
     def count_cost_conversation(self, response_package):
         input_tokens = response_package.usage_metadata['input_tokens']
