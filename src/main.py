@@ -10,10 +10,8 @@ if __name__ == '__main__':
             print(f"AI: {response}")
 
     except KeyboardInterrupt:
-        total_cost = model.total_cost
         print('\n')
-        print(f"Conversation Cost: {format(total_cost, '.10f')}$")
-        print('\n')
-        # Create log file to keep conversation
+        print(f"Conversation Cost: {format(model.total_cost, '.10f')}$")
+        print('')
         print(f'Conversation log: ')
         print(model.memory)
